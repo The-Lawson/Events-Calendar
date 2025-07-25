@@ -414,9 +414,6 @@ body {
     }
   }
    
-data.forEach(function(ev) {
-  ev.date = moment(ev.date);
-});
    
   Calendar.prototype.draw = function() {
     //Create Header
@@ -731,6 +728,10 @@ data.forEach(function(ev) {
     
   }
 
+   data.forEach(function(ev) {
+    ev.date = moment(ev.date);
+  });
+ 
   var calendar = new Calendar('#calendar', data);
 
 }();
